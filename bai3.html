@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+
+<script>
+    function printFibonacci(number) {
+        let fibNum1 = 0;
+        let fibNum2 = 0;
+        let fibNum = 1;
+        let array = [];
+        while (fibNum < number) {
+            array.push(fibNum);
+            fibNum1 = fibNum2;
+            fibNum2 = fibNum;
+            fibNum = fibNum1 + fibNum2;
+        }
+        return array;
+    }
+
+    let num = 25;
+    let result = printFibonacci(num);
+    console.log(result);
+
+    num = 12;
+    console.log(printFibonacci(num));
+</script>
+
+</body>
+</html>
